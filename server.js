@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Connect to MongoDB instance
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dictionaryDB", { useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolioDB", { useNewUrlParser: true, useFindAndModify: false });
 
 //Proxy port
 const PORT = process.env.PORT || 3001;
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //Register API router
-app.use(require("./routes/api-routes.js"));
+app.use(require("./routes"));
 
 //Start the server
 app.listen(PORT, () => {

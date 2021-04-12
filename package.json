@@ -6,23 +6,28 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm run start",
+    "seed": "node seeder/seed.js"
   },
-  "name": "01-MERN",
+  "name": "Material-UI Portfolio",
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coleman-buffa/MERN-template.git"
+    "url": "git+https://github.com/coleman-buffa/material-ui-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coleman-buffa/MERN-template/issues"
+    "url": "https://github.com/coleman-buffa/material-ui-portfolio/issues"
   },
-  "homepage": "https://github.com/coleman-buffa/MERN-template#readme",
+  "homepage": "https://github.com/coleman-buffa/material-ui-portfolio#readme",
   "devDependencies": {
     "concurrently": "^6.0.0",
     "nodemon": "^2.0.7"
