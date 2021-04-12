@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "01-MERN",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coleman-buffa/MERN-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coleman-buffa/MERN-template/issues"
+  },
+  "homepage": "https://github.com/coleman-buffa/MERN-template#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
