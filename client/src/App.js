@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from "./components/navbar/navbar";
 import Container from "@material-ui/core/container";
 import Bio from "./components/bio/bio";
-// import Projects from "./components/projects/projects";
+import Projects from "./components/projects/projects";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Container>
         <Bio/>
-      {/* <Projects/> */}
+      <Projects/>
       </Container>
 
     </div>
