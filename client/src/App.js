@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from "./components/navbar/navbar";
-import Container from "@material-ui/core/container";
+import { Container, Grid } from "@material-ui/core";
 import Bio from "./components/bio/bio";
 import Projects from "./components/projects/projects";
 
@@ -8,10 +8,14 @@ import Projects from "./components/projects/projects";
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Bio/>
-      <Projects/>
-      </Container>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={4}>
+          <Bio />
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Projects />
+        </Grid>
+      </Grid>
 
     </div>
   );
