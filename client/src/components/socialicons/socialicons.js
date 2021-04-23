@@ -10,7 +10,7 @@ function SocialIcons() {
       <Grid item xs={4}>
       <Button
           variant="contained"
-          color="grey"
+          color="default"
           size="medium"
           startIcon={<LinkedIn />}
           href="https://www.linkedin.com/in/coleman-buffa/"
@@ -21,7 +21,7 @@ function SocialIcons() {
       <Grid item xs={4}>
         <Button
           variant="contained"
-          color="grey"
+          color="default"
           size="medium"
           startIcon={<GitHub />}
           href="https://github.com/coleman-buffa"
@@ -33,7 +33,7 @@ function SocialIcons() {
       <Grid item xs={4}>
       <Button
           variant="contained"
-          color="grey"
+          color="default"
           size="medium"
           startIcon={<Description />}
           href={Resume}
