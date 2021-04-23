@@ -40,7 +40,20 @@ function Projects() {
         ))}
 
       </Grid>
-      <ProjectCard />
+      <Grid container spacing={0}>
+      {projects.map(project => (
+        <ProjectCard
+        key={project._id}
+        title={project.title}
+        description={project.description}
+        image={project.image_link}
+        repo={project.repo_link}
+        deployed={project.deployed_link}
+        skills={project.skills}
+        />
+      ))}
+
+      </Grid>
     </div>
   );
 }
