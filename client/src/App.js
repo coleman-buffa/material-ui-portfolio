@@ -8,6 +8,7 @@ import Projects from "./components/projects/projects";
 function App() {
   return (
     <div className="App">
+      <Container>
       <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
           <Bio />
@@ -16,7 +17,7 @@ function App() {
           <Projects />
         </Grid>
       </Grid>
-
+      </Container>
     </div>
   );
 }
