@@ -9,11 +9,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
-    margin: 'auto',
-    width: "100%",
-    // display: "inline-block"
-    // maxWidth: 500,
+    padding: theme.spacing(0.5),
+    margin: "10px 0 10px 0",
+    width: 750,
   },
   image: {
     width: 225,
@@ -25,6 +23,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '100%',
     maxHeight: '100%',
   },
+  descContainer: {
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  buttonGroup: {
+    display: "flex",
+    justifyContent: "space-around"
+  }
+
 }));
 
 function ProjectCard(props) {
@@ -33,7 +40,7 @@ function ProjectCard(props) {
   return (
     <div>
       <Paper className={classes.paper}>
-        <Grid className={classes.paper} container spacing={2}>
+        <Grid className={classes.paper} container spacing={0}>
           <Grid item xs={12} md={6}>
             <ButtonBase className={classes.image}>
               <img className={classes.img} alt={props.title} src={props.image} />
@@ -42,8 +49,8 @@ function ProjectCard(props) {
               {props.title}
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Grid item container direction="column" spacing={2}>
+          <Grid item container xs={12} md={6}>
+            <Grid item container direction="column" spacing={1}>
               <Grid item>
                 <Typography gutterBottom variant="body2">
                   {props.description}
@@ -52,7 +59,7 @@ function ProjectCard(props) {
                   {props.skills}
                 </Typography>
               </Grid>
-              <Grid item direction="row" justify="space-around">
+              <Grid item container direction="row" className={classes.buttonGroup}>
                 <Button
                   variant="contained"
                   color="default"

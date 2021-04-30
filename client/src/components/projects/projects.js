@@ -31,27 +31,27 @@ function Projects() {
 
   return (
     <div>
+      <h1>Skills and Projects</h1>
       <Grid container spacing={2}>
         {skills.map(skill => (
           <Skills
-          key={skill}  
-          skill={skill}
+            key={skill}
+            skill={skill}
           />
         ))}
-
       </Grid>
       <Grid container spacing={0}>
-      {projects.map(project => (
-        <ProjectCard
-        key={project._id}
-        title={project.title}
-        description={project.description}
-        image={project.image_link}
-        repo={project.repo_link}
-        deployed={project.deployed_link}
-        skills={project.skills}
-        />
-      ))}
+        {projects.map(project => (
+          <ProjectCard
+            key={project._id}
+            title={project.title}
+            description={project.description}
+            image={project.image_link}
+            repo={project.repo_link}
+            deployed={project.deployed_link}
+            skills={project.skills}
+          />
+        ))}
 
       </Grid>
     </div>
